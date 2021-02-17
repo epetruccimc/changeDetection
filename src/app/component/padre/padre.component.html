@@ -1,0 +1,14 @@
+<div>
+  <h1>Padre {{nombre}}</h1>
+  <button (click)='eventoClick()'>Saluda al abuelo</button>
+  <ng-container  *ngFor='let item of nombres; index as i' >
+    <app-hijo [hijo]='item'></app-hijo>
+      <button size='small' color='secondary' (click)='sumaEdadCambiandoReferencia(item, i)'>Agregar 1 año a {{item?.nombre}}</button>
+      <br>
+      <small>Cambiando la referencia</small>
+      <br>
+      <button size='small' color='secondary' (click)='sumaEdadSinReferencia(item)'>Agregar 1 año a {{item?.nombre}}</button>
+      <br>
+      <small>Sin cambiar la referencia</small>
+  </ng-container>
+</div>

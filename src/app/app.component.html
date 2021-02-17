@@ -1,0 +1,15 @@
+<!--<h1>{{title}}</h1>-->
+<h1>{{getTitle()}}</h1>
+
+<div>
+  <h3>Eventos del DOM</h3>
+  <button (click)='eventoClick()'>Iniciar</button>
+  <h3>Eventos SetTimeOut y SetInterval</h3>
+  <button (click)='eventoTimer()'>Iniciar</button>
+  <p>Tiempo: {{timer}} seg</p>
+  <h3>Eventos de observables</h3>
+  <p>{{pipeAsync$ | async}}</p>
+  <button (click)='pipeAsync()'>Probar</button>
+  <h3>Ejemplos en componentes anidados</h3>
+  <app-abuelo></app-abuelo>
+</div>
